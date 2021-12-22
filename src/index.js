@@ -1,6 +1,5 @@
-import { StrictMode } from "react";
+import React, { StrictMode } from "react";
 import ReactDOM from "react-dom";
-import React from "react";
 
 // Slomux - реализация Flux, в которой, как следует из названия, что-то сломано.
 // Нужно починить то, что сломано
@@ -71,8 +70,10 @@ const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case UPDATE_COUNTER:
       state.counter += action.payload;
+      break;
     case CHANGE_STEP_SIZE:
       state.stepSize = action.payload;
+      break;
     default:
       break;
   }
