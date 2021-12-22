@@ -75,7 +75,7 @@ const reducer = (state = defaultState, action) => {
       state.stepSize = action.payload;
       break;
     default:
-      break;
+      return state;
   }
 };
 
